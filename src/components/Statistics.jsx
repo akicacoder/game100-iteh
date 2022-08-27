@@ -26,12 +26,12 @@ export default function Statistics({ winners }) {
         value={(100 * (winners.length === 0 ? 0 : winners.filter(e => e === 2).length / winners.length)).toFixed(2) + ' %'}
       />
       <div className='mt-2'>
-        <h2 className='text-center p-2'>Streak</h2>
-        <div className='d-flex justify-content-between'>
+        <h2 className='text-center p-2'>History</h2>
+        <div className='d-flex '>
           {
             winners.slice().reverse().map(e => {
               return (
-                <div className='card mr-2 '>{e}</div>
+                <div className='streak-item mr-2 '>{e}</div>
               )
             })
           }
